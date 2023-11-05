@@ -19,7 +19,7 @@ const dispatch = useDispatch()
 const navigate = useNavigate()
 const location = useLocation()
 const from = location.state?.preLocation?.pathname || '/';
-console.log(from)
+// console.log(from)
   const submitHandler = (e) => {
     e.preventDefault();
     const username = usernameInp.current.value;
@@ -30,7 +30,7 @@ console.log(from)
         identifier:username,
         password
       }).then(res=>{
-        console.log(res)
+        // console.log(res)
         if(!res.error){
          //login successfully 
          dispatch(login({
@@ -47,7 +47,7 @@ console.log(from)
         password,
         email
       }).then(res=>{
-        console.log(res)
+        // console.log(res)
         if(!res.error){
           setIsLoginForm(true)
         }

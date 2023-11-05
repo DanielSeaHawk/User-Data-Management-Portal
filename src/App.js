@@ -5,8 +5,22 @@ import Layout from "./components/Layout";
 import AuthFormPage from "./pages/AuthFormPage";
 import React from "react";
 import NeedAuth from "./components/NeedAuth";
-function App() {
 
+import useAutoLogout from "./hooks/useAutoLogout";
+function App() {
+  useAutoLogout()
+//   const auth = useSelector(state=>state.auth)
+//   const dispatch = useDispatch()
+//   useEffect(()=>{
+
+//  const timeout = auth.expirationTime - Date.now
+//     const timer= setTimeout(()=>{
+//       dispatch(logout())
+//     },timeout)
+//     return ()=>{
+//       clearTimeout(timer)
+//     }
+// },[auth,dispatch])
   return (
     <div>
       <Layout>
