@@ -5,8 +5,8 @@ import Layout from "./components/Layout";
 import AuthFormPage from "./pages/AuthFormPage";
 import React from "react";
 import NeedAuth from "./components/NeedAuth";
-
 import useAutoLogout from "./hooks/useAutoLogout";
+import StudentPage from "./pages/StudentPage";
 function App() {
   useAutoLogout()
 //   const auth = useSelector(state=>state.auth)
@@ -31,6 +31,7 @@ function App() {
             element={<NeedAuth><ProfilePage /></NeedAuth>}
           />
           <Route path="/authform" element={<AuthFormPage />} />
+          <Route path="/student" element={<NeedAuth><StudentPage /></NeedAuth>} />
         </Routes>
       </Layout>
     </div>

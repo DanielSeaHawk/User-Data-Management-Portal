@@ -1,0 +1,7 @@
+.studentForm input{
+    width: 80px;
+}
+th,td{
+    border: 1px solid;
+    text-align: center;
+}
